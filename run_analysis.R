@@ -43,7 +43,7 @@ TD <- cbind(X,Merge_y,Merge_sub)
 TD
 }
 
-avg_for_activity <- function(){
+avg_for_activity <- function(TD){
     library(dplyr)
     i <- 0
     zeros <- matrix(0,length(unique(TD$activities)),length(colnames(TD))-2)
@@ -62,7 +62,7 @@ avg_for_activity <- function(){
     TD_activities
 }
 
-avg_for_subject <- function(){
+avg_for_subject <- function(TD){
     library(dplyr)
     zeros <- matrix(0,length(unique(TD$subject_num)),length(colnames(TD))-2)
     TD_subject_num <- data.frame(zeros)
