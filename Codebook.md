@@ -1,33 +1,29 @@
 # getting-and-cleaning-data-assignment
 
-original data of this experiment is https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-##get mean and std of the data
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
 
-1. load the training and test data using read.table function/
+The set of variables that were estimated from these signals are: 
+mean(): Mean value
+std(): Standard deviation
 
-2. load names of data.
-
-3. merge train data and test using rbind function.
-
-4. set names of data.
-
-5. Extract mean and std measurement using grepl function.
-
-6. merge X,y and subject_num using cbind function.
-
-##get average of each variable for each activities
-
-1. filter for each activities using filter function(in dplyr library)
-
-2. get average for each variable.
-
-3. return piece together data frame of 2.
-
-##get average of each variable for each subject
-
-1. filter for each subjects using filter function(in dplyr library)
-
-2. get average for each variable.
-
-3. return piece together data frame of 2.
+activities : 6 classes factor with levels : 'WALKING','WALKING_UPSTAIRS','WALKING_DOWNSTAIRS','SITTING','STANDING','LAYING'
+subject_num : number of each subject 1:30 
